@@ -1,0 +1,118 @@
+footer {
+    position: absolute;
+    bottom: 0px;
+    background: #f2f2f2;
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    a {
+        cursor: pointer;
+        margin: 0px 25px;
+    }
+}
+
+header {
+    float: right;
+    margin-top: 2px;
+    width: 100%;
+    text-align: right;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding: 13px 29px;
+}
+
+li {
+    display: inline;
+    padding-left: 15px;
+    line-height: 24px;
+    a {
+        font-size: 13px;
+        color: black;
+        opacity: .75;
+        &:hover {
+            color: black;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+    img {
+        border-radius: 100%;
+        &:hover {
+            -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, .15);
+            box-shadow: 0 1px 0 rgba(0, 0, 0, .15);
+        }
+        &.notifications {
+            background: black;
+            opacity: 0.75;
+            height: 20px;
+            padding: 4px;
+            &:hover {
+                opacity: 1;
+            }
+        }
+        &.cube {
+            border-radius: 0px;
+            height: 17px;
+            opacity: 0.75;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.avatar {
+    -webkit-background-size: 32px 32px;
+    background-size: 32px 32px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    display: block;
+    margin: -1px;
+    overflow: hidden;
+    position: relative;
+    height: 32px;
+    width: 32px;
+    z-index: 0;
+    background-image: url(https://lh3.googleusercontent.com/-o9yhc_bwtEg/AAAAAAAAAAI/AAAAAAAAAAA/AI6yGXxlhn1MmccyMEmeqzozxlbg4UuY0A/s32-c-mo-md/photo.jpg);
+}
+
+.avatar-popup {
+    cursor: pointer;
+    display: inline-block;
+}
+
+.popup-info {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.logo {
+    height: 92px;
+    width: auto;
+}
+
+.container-app {
+    margin: auto;
+    margin-bottom: 8px;
+    padding: 5px;
+    text-align: center;
+    width: 100px;
+    cursor: pointer;
+    img {
+        max-width: 60px;
+        border-radius: 0%;
+        &:hover {
+            box-shadow: none;
+        }
+    }
+    &:hover {
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+    }
+    p {
+        font-size: 12px;
+    }
+}

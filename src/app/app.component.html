@@ -1,0 +1,61 @@
+<header>
+    <ul>
+        <li><a>Inicio</a></li>
+        <li><a>Sobre mí</a></li>
+        <li>
+            <a [ngbPopover]="popupApps" triggers="manual" #p3="ngbPopover" (click)="p3.toggle(); p.close()" popoverTitle="Algunos de mis trabajos" placement="bottom"><img class="cube" src="./../assets/img/60991.svg"></a>
+        </li>
+        <li>
+            <a><img class="notifications" src="./../assets/img/android-notifications.svg"></a>
+        </li>
+        <li>
+            <a [ngbPopover]="popupProfile" triggers="manual" #p="ngbPopover" (click)="p.toggle(); p3.close()" placement="bottom"><img src="https://lh3.googleusercontent.com/-o9yhc_bwtEg/AAAAAAAAAAI/AAAAAAAAAAA/AI6yGXxlhn1MmccyMEmeqzozxlbg4UuY0A/s32-c-mo-md/photo.jpg"></a>
+        </li>
+    </ul>
+</header>
+
+
+<div (click)="p.close(); p3.close();">
+
+    <router-outlet></router-outlet>
+    <ng-template id="popupProfile" #popupProfile>
+        <div>
+            <img [ngbPopover]="popAvatar" triggers="manual" #p2="ngbPopover" (click)="p2.open()" placement="left" class="avatar-popup" src="https://lh3.googleusercontent.com/-o9yhc_bwtEg/AAAAAAAAAAI/AAAAAAAAAAA/AI6yGXxlhn1MmccyMEmeqzozxlbg4UuY0A/s96-c-mo-md/photo.jpg">
+            <div class="popup-info">
+                <div>Adán González López</div>
+                <div><a href="mail:adan.gonzalez.lopez@gmail.com">adan.gonzalez.lopez@gmail.com</a></div>
+                <div><a href="mail:adangonzalez@moaw.co">adangonzalez@moaw.co</a></div>
+                <div><a href="tel:+34618070825">+34 618 07 08 25</a></div>
+            </div>
+        </div>
+        <div>
+            <input (click)="onContact()" class="button contact" value="Contactar" type="submit">
+        </div>
+    </ng-template>
+    <ng-template id="popAvatar" #popAvatar>¿Tratas de pincharme un ojo? <br> <b>Soy digital</b>, no lo conseguirás!!
+    </ng-template>
+    <ng-template id="popupApps" #popupApps>
+        <div class="row">
+            <div class="col-xs-4 container-app">
+                <img src="./../assets/img/muser.svg"><br>
+                <p class="text-center">Playmuser.com</p>
+            </div>
+            <div class="col-xs-4 container-app">
+                <img src="./../assets/img/moaw.png"><br>
+                <p class="text-center">Moaw</p>
+            </div>
+            <div class="col-xs-4 container-app">
+                <img src="./../assets/img/muebles_caloto_logo_negro_corto.svg"><br>
+                <p class="text-center">Muebles Caloto</p>
+            </div>
+        </div>
+    </ng-template>
+</div>
+
+
+<footer>
+    <a href="https://www.facebook.com/adan.gonzalezlopez" target="_blank"><i class="fa fa-facebook"></i></a>
+    <a href="https://www.linkedin.com/in/adangnzlz/" target="_blank"><i class="fa fa-linkedin"></i></a>
+    <a href="https://twitter.com/adangonzalez7" target="_blank"><i class="fa fa-twitter"></i></a>
+    <a href="https://www.instagram.com/adan.gonzalezlopez" target="_blank"><i class="fa fa-instagram"></i></a>
+</footer>
