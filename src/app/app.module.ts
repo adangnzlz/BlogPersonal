@@ -5,13 +5,17 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
+import { AboutComponent } from './components/about/about.component';
+import { LuckyComponent } from './components/lucky/lucky.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    AboutComponent,
+    LuckyComponent
   ],
   imports: [
     RouterModule.forRoot(routes), // configuración para el módulo raíz

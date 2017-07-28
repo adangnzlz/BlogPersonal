@@ -1,26 +1,25 @@
 <header>
     <ul>
-        <li><a>Inicio</a></li>
-        <li><a>Sobre mí</a></li>
+        <li><a class="link" routerLink="/inicio">Inicio</a></li>
+        <li><a class="link" routerLink="/about">Sobre mí</a></li>
         <li>
-            <a [ngbPopover]="popupApps" triggers="manual" #p3="ngbPopover" (click)="p3.toggle(); p.close()" popoverTitle="Algunos de mis trabajos" placement="bottom"><img class="cube" src="assets/img/blocks.svg"></a>
+            <a class="link" [ngbPopover]="popupApps" triggers="manual" #p3="ngbPopover" (click)="p3.toggle();  p.close(); closeCookies()" popoverTitle="Algunos de mis trabajos" placement="bottom"><img class="cube" src="assets/img/blocks.svg"></a>
         </li>
         <li>
-            <a><img class="notifications" src="assets/img/notifications.svg"></a>
+            <a class="link" [ngbPopover]="popupCookies" triggers="manual" #pCookies="ngbPopover" (click)="p.close(); toggleCookies();  p3.close()" placement="bottom"><img class="notifications" src="assets/img/notifications.svg"></a>
         </li>
         <li>
-            <a [ngbPopover]="popupProfile" triggers="manual" #p="ngbPopover" (click)="p.toggle(); p3.close()" placement="bottom"><img src="https://lh3.googleusercontent.com/-o9yhc_bwtEg/AAAAAAAAAAI/AAAAAAAAAAA/AI6yGXxlhn1MmccyMEmeqzozxlbg4UuY0A/s32-c-mo-md/photo.jpg"></a>
+            <a class="link" [ngbPopover]="popupProfile" triggers="manual" #p="ngbPopover" (click)="p.toggle();  p3.close(); closeCookies()" placement="bottom"><img src="https://lh3.googleusercontent.com/-o9yhc_bwtEg/AAAAAAAAAAI/AAAAAAAAAAA/AI6yGXxlhn1MmccyMEmeqzozxlbg4UuY0A/s32-c-mo-md/photo.jpg"></a>
         </li>
     </ul>
 </header>
 
 
-<div (click)="p.close(); p3.close();">
-
+<div (click)="p.close();  p3.close(); closeCookies()">
     <router-outlet></router-outlet>
     <ng-template id="popupProfile" #popupProfile>
         <div>
-            <img [ngbPopover]="popAvatar" triggers="manual" #p2="ngbPopover" (click)="p2.open()" placement="left" class="avatar-popup" src="https://lh3.googleusercontent.com/-o9yhc_bwtEg/AAAAAAAAAAI/AAAAAAAAAAA/AI6yGXxlhn1MmccyMEmeqzozxlbg4UuY0A/s96-c-mo-md/photo.jpg">
+            <img height="75" [ngbPopover]="popAvatar" triggers="manual" #p2="ngbPopover" (click)="p2.open()" placement="left" class="avatar-popup" src="https://lh3.googleusercontent.com/-o9yhc_bwtEg/AAAAAAAAAAI/AAAAAAAAAAA/AI6yGXxlhn1MmccyMEmeqzozxlbg4UuY0A/s96-c-mo-md/photo.jpg">
             <div class="popup-info">
                 <div>Adán González López</div>
                 <div><a href="mail:adan.gonzalez.lopez@gmail.com">adan.gonzalez.lopez@gmail.com</a></div>
@@ -36,20 +35,48 @@
     </ng-template>
     <ng-template id="popupApps" #popupApps>
         <div class="row">
-            <div class="col-xs-4 container-app">
-                <img src="assets/img/muser.svg"><br>
-                <p class="text-center">Playmuser.com</p>
+            <a target="_blank" href="https://playmuser.com">
+                <div class="col-xs-4 container-app">
+                    <img src="assets/img/muser.svg"><br>
+                    <p class="text-center">Playmuser.com</p>
+                </div>
+            </a>
+            <a target="_blank" height="50" href="https://moaw.co">
+                <div class="col-xs-4 container-app">
+                    <img src="assets/img/moaw.png"><br>
+                    <p class="text-center">Moaw</p>
+                </div>
+            </a>
+            <a target="_blank" href="https://mueblescaloto.com/">
+                <div class="col-xs-4 container-app">
+                    <img src="assets/img/muebles_caloto_logo_negro_corto.svg"><br>
+                    <p class="text-center">Muebles Caloto</p>
+                </div>
+            </a>
+        </div>
+    </ng-template>
+    <ng-template id="popupCookies" #popupCookies>
+        <div [hidden]="acceptCookies" class="row">
+            <div class=" col-sm-12">
+                En este caso las <a><b>Cookies</b></a> no son galletas pero tienes que aceptarlas!! <a href="http://www.agpd.es/portalwebAGPD/canaldocumentacion/publicaciones/common/Guias/Guia_Cookies.pdf" target="_blank" class="cookies">Ver aviso</a>
             </div>
-            <div class="col-xs-4 container-app">
-                <img src="assets/img/moaw.png"><br>
-                <p class="text-center">Moaw</p>
+            <div class="col-sm-12">
+                <input (click)="onAcceptCookies()" class="button contact" value="Acepto" type="submit">
             </div>
-            <div class="col-xs-4 container-app">
-                <img src="assets/img/muebles_caloto_logo_negro_corto.svg"><br>
-                <p class="text-center">Muebles Caloto</p>
+        </div>
+        <div [hidden]="!acceptCookies" class="row">
+            <div class=" col-sm-12">
+                Ya has aceptado las cookies, muchas gracias!
+            </div>
+            <div class="col-sm-12">
+                <input (click)="pCookies.close()" class="button contact" value="Entendido" type="submit">
             </div>
         </div>
     </ng-template>
+
+
+
+
 </div>
 
 

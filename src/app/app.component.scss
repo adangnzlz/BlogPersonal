@@ -8,6 +8,7 @@ footer {
     a {
         cursor: pointer;
         margin: 0px 25px;
+        padding: 0px 10px;
     }
 }
 
@@ -29,7 +30,7 @@ li {
     display: inline;
     padding-left: 15px;
     line-height: 24px;
-    a {
+    &.link {
         font-size: 13px;
         color: black;
         opacity: .75;
@@ -115,4 +116,8 @@ li {
     p {
         font-size: 12px;
     }
+}
+
+.cookies {
+    text-decoration: underline!important;
 }
