@@ -1,4 +1,5 @@
-import { Component, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, ViewChild, AfterViewInit, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 
 
 
@@ -10,14 +11,14 @@ declare var $: any;
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent implements OnInit, AfterViewInit {
   closeResult: string;
   acceptCookies: boolean;
   title = 'app';
   @ViewChild('p') popup: any;
   @ViewChild('pCookies') popupCookies: any;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngAfterViewInit(): void {
     setTimeout(() => {
@@ -63,6 +64,12 @@ export class AppComponent implements AfterViewInit {
 
 
 
-
-
+  ngOnInit(): void {
+    this.router.events.subscribe((evt) => {
+      if (!(evt instanceof NavigationEnd)) {
+        return;
+      }
+      window.scrollTo(0, 0)
+    });
+  }
 }

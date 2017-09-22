@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+declare var $;
+
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
@@ -12,4 +14,8 @@ export class AboutComponent implements OnInit {
   ngOnInit() {
   }
 
+
+  goDown() {
+    $('body,html').animate({ scrollTop: $('.content-section-a').offset().top - 100 }, 1000);
+  }
 }

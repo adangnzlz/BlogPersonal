@@ -17,5 +17,8 @@
 </div>
 <div class="container-buttons">
     <input class="button" value="Buscar con Google" type="submit">
-    <input class="button" routerLink="/lucky" value="Voy a tener suerte" type="submit">
+    <input class="button" (click)="showLucky()" [value]="textButton" type="submit">
 </div>
+
+
+<app-lucky *ngIf="show" [show]="show"></app-lucky>

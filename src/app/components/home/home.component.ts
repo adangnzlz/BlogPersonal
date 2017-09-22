@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+declare var $;
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  show = false;
+  textButton = 'Voy a tener suerte';
   constructor() { }
 
   ngOnInit() {
+  }
+
+
+  showLucky() {
+    this.show = true;
+    setTimeout(() => {
+      $('body,html').animate({ scrollTop: $('app-lucky').offset().top }, 1000);
+    }, 10);
   }
 
 }

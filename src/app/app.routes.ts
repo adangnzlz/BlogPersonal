@@ -5,6 +5,6 @@ import { LuckyComponent } from './components/lucky/lucky.component';
 export const routes: Routes = [
   { 'path': '', component: HomeComponent },
   { 'path': 'inicio', component: HomeComponent },
-  { 'path': 'about', component: AboutComponent },
-  { 'path': 'lucky', component: LuckyComponent }
+  { 'path': 'about', component: AboutComponent }
+  // { 'path': 'lucky', component: LuckyComponent }
 ];

@@ -9,7 +9,6 @@ import { AboutComponent } from './components/about/about.component';
 import { LuckyComponent } from './components/lucky/lucky.component';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,

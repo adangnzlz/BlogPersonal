@@ -5,68 +5,13 @@ app-root {
 }
 
 .popover.popover-bottom {
-    margin-top: 23px !important;
-    -webkit-transform: translateX(-127px);
-    transform: translateX(-160127pxpx);
-    width: 300px !important;
-    max-width: 300px;
-    -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
+    width: 100% !important;
+    max-width: 300px!important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     border-radius: 2px;
-}
-
-.popover.bs-tether-element-attached-top::after,
-.popover.popover-bottom::after {
-    margin-left: 120px!important;
-    top: -10px!important;
-    border-bottom-color: white!important;
-    border-left-width: 7.5px!important;
-    border-right-width: 7.5px!important;
-}
-
-.popover.bs-tether-element-attached-top::before,
-.popover.popover-bottom::before {
-    margin-left: 119px !important;
-    top: -12px !important;
-    border-bottom-color: rgba(0, 0, 0, .15)!important;
-    border-left-width: 8.5px!important;
-    border-right-width: 7.5px!important;
-}
-
-.popover.bs-tether-element-attached-right,
-.popover.popover-left {
-    margin-left: 28px!important;
-    margin-top: 28px!important;
-    border-radius: 15px!important;
-}
-
-.popover.bs-tether-element-attached-right::after,
-.popover.popover-left::after {
-    margin-top: -17px!important;
-    transform: skewY(-53deg);
-}
-
-.popover.bs-tether-element-attached-right::after,
-.popover.popover-left::before {
-    margin-top: -18px!important;
-    transform: skewY(-53deg);
-}
-
-#ngb-popover-0 {
-    margin-top: 23px !important;
-    -webkit-transform: translateX(-77px);
-    transform: translateX(-77px);
-    width: 350px !important;
-    max-width: 350px;
-    -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
-    border-radius: 2px;
-    &:after {
-        margin-left: 67px !important;
-    }
-    &:before {
-        margin-left: 66px !important;
-    }
+    position: absolute;
+    left: calc(100% - 305px)!important;
+    top: 60px!important;
 }
 
 .popover-title {
@@ -115,6 +60,21 @@ app-root {
 .fa-linkedin {
     &:hover {
         color: #0077b5;
+    }
+    &:before {
+        transform: translateY(-42px);
+        position: absolute;
+    }
+}
+
+.fa-infojobs {
+    height: 45px;
+    padding: 8px;
+    padding-left: 20px;
+    image-rendering: -webkit-optimize-contrast;
+    content: url('./assets/img/infojobs.png');
+    &:hover {
+        content: url('./assets/img/infojobs_hover.png');
     }
 }
 
@@ -258,4 +218,38 @@ textarea {
         max-width: 1424px!important;
         margin: 30px auto;
     }
+}
+
+.popover.bs-tether-element-attached-top::before,
+.popover.popover-bottom::before {
+    display: none!important;
+}
+
+.popover.bs-tether-element-attached-top::after,
+.popover.popover-bottom::after {
+    display: none!important;
+}
+
+#ngb-popover-1 {
+    .popover-title {
+        display: none!important;
+    }
+    p {
+        font-size: 12px;
+        padding-left: 20px;
+    }
+}
+
+#ngb-popover-2 {
+    .popover-title {
+        display: none!important;
+    }
+    p {
+        font-size: 12px
+    }
+}
+
+.moaw {
+    color: #06ceb1!important;
+    font-weight: bold;
 }
