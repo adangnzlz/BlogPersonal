@@ -46,6 +46,7 @@ h6 {
 
 .intro-message>h3 {
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+    display: inline-block;
 }
 
 .intro-social-buttons i {
@@ -80,14 +81,15 @@ h6 {
 }
 
 .content-section-a {
-    padding: 50px 0;
-    background-color: #f8f8f8;
+    padding: 100px 0;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
 }
 
 .content-section-b {
-    padding: 50px 0;
-    border-top: 1px solid #e7e7e7;
-    border-bottom: 1px solid #e7e7e7;
+    padding: 100px 0;
+    background-color: #232323;
+    color: white!important;
 }
 
 .section-heading {
@@ -178,6 +180,9 @@ a {
 }
 
 .subtitle {
+    min-height: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
     @media (min-width: 767px) {
         margin-left: 150px;
     }
@@ -194,7 +199,6 @@ body {
 }
 
 .arrow {
-    position: absolute;
     top: 70%;
     left: 50%;
     margin-left: -20px;
@@ -203,6 +207,19 @@ body {
     height: 100px;
     @media (max-width: 1024px) {
         display: none;
+    }
+    &.extra {
+        position: relative;
+        margin-top: 100px;
+        margin-left: -40px;
+        display: block;
+        transition: all 0.6s;
+        @media (min-width: 767px) {
+            opacity: 0;
+            &.showing {
+                opacity: 1;
+            }
+        }
     }
 }
 
@@ -366,5 +383,43 @@ body {
 }
 
 #portfolio {
-    margin: 100px 0px;
+    margin: 0px;
+    padding-bottom: 0px!important;
+    background: #232323;
+}
+
+.moaw.white {
+    &:hover {
+        color: white!important;
+    }
+}
+
+hr {
+    &.white {
+        background: white;
+    }
+}
+
+p {
+    &.author {
+        font-size: 12px!important;
+    }
+    @media (max-width: 992px) {
+        text-align: left;
+    }
+}
+
+.pb-150 {
+    padding-bottom: 150px;
+}
+
+@media (max-width: 1024px) {
+    .text-block {
+        margin-bottom: 50px;
+    }
+}
+
+.about {
+    opacity: 0;
+    transition: all 1s;
 }

@@ -1,7 +1,7 @@
 <header>
     <ul>
-        <li><a class="link" routerLink="/inicio">Inicio</a></li>
-        <li><a class="link" routerLink="/about">Sobre mí</a></li>
+        <li [class.active]="isActiveHome()"><a class="link" routerLink="/inicio">Inicio</a></li>
+        <li [class.active]="isActive('/about')"><a class="link" routerLink="/about">Sobre mí</a></li>
         <li>
             <a [ngClass]="p3.isOpen() ? 'link arrow cube1' : 'link cube1'" [ngbPopover]="popupApps" triggers="manual" #p3="ngbPopover" (click)="p3.toggle();  p.close(); closeCookies()" popoverTitle="¿Con quien he trabajado?" placement="bottom"><img class="cube" src="assets/img/blocks.svg"></a>
         </li>
@@ -15,11 +15,11 @@
 </header>
 
 
-<div (click)="p.close();  p3.close(); closeCookies()">
+<div class="contenido" (click)="p.close();  p3.close(); closeCookies()">
     <router-outlet></router-outlet>
     <ng-template id="popupProfile" #popupProfile>
         <div>
-            <img height="75" [ngbPopover]="popAvatar" triggers="manual" #p2="ngbPopover" (click)="p2.open()" placement="left" class="avatar-popup" src="https://lh3.googleusercontent.com/-o9yhc_bwtEg/AAAAAAAAAAI/AAAAAAAAAAA/AI6yGXxlhn1MmccyMEmeqzozxlbg4UuY0A/s96-c-mo-md/photo.jpg">
+            <img height="75" [ngbPopover]="popAvatar" triggers="manual" #p2="ngbPopover" (click)="p2.open()" placement="down" class="avatar-popup" src="https://lh3.googleusercontent.com/-o9yhc_bwtEg/AAAAAAAAAAI/AAAAAAAAAAA/AI6yGXxlhn1MmccyMEmeqzozxlbg4UuY0A/s96-c-mo-md/photo.jpg">
             <div class="popup-info">
                 <p>Adán González López</p>
                 <div><a href="mail:adan.gonzalez.lopez@gmail.com">adan.gonzalez.lopez@gmail.com</a></div>
@@ -124,10 +124,10 @@
 
 
 
+
+    <footer>
+        <a title="linkedin" href="https://www.linkedin.com/in/adangnzlz/" target="_blank"><i class="fa fa-linkedin"></i></a>
+        <a title="Infojobs" href="https://freelance.infojobs.net/freelance/Adan-Gonzalez-Lopez/xj0hjzc39v1equl4vb1/1" target="_blank"><i class="fa fa-infojobs"></i></a>
+        <p class="designed">Designed &amp; Developed by Adán González López</p>
+    </footer>
 </div>
-
-
-<footer>
-    <a title="linkedin" href="https://www.linkedin.com/in/adangnzlz/" target="_blank"><i class="fa fa-linkedin"></i></a>
-    <a title="Infojobs" href="https://freelance.infojobs.net/freelance/Adan-Gonzalez-Lopez/xj0hjzc39v1equl4vb1/1" target="_blank"><i class="fa fa-infojobs"></i></a>
-</footer>

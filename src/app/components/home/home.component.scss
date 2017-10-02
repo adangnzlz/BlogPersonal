@@ -27,3 +27,13 @@
 .container-buttons {
     text-align: center;
 }
+
+.paypal-button {
+    background: red;
+    width: 300px;
+    height: 40px;
+    transform: skewX(-45deg);
+    &:hover {
+        border: 1px solid white;
+    }
+}

@@ -3,12 +3,12 @@
     <!-- <div class="overlay"></div> -->
     <div class="container header">
         <div class="intro-message">
-            <h1>Adán González</h1>
-            <h3 class="subtitle">FullStack Developer</h3>
-            <hr class="intro-divider">
-            <p>Nací en el año 1991 en Lugo, allí estuve hasta los 18 años cuando me marché a estudiar Ingeniería informática a A Coruña. Soy un apasionado de las últimas tecnologías y de buscar las soluciones más eficientes a los retos que se me plantean
+            <h1 [@layertitle]="goneTitle">Adán González</h1>
+            <div id="typing" class="subtitle h3"></div>
+            <hr [@layersubtitle]="goneTitle" class="intro-divider">
+            <p [@layerparagraph]="goneTitle">Nací en el año 1991 en Lugo, allí estuve hasta los 18 años cuando me marché a estudiar Ingeniería informática a A Coruña. fotraun apasionado de las últimas tecnologías y de buscar las soluciones más eficientes a los retos que se me plantean
                 en el día a día.</p>
-            <p>Actualmente dirijo el área de desarrollo software en Moaw Solutions, agencia creativa donde tratamos de resolver los problemas de nuestros clientes con las soluciones más innovadoras.</p>
+            <p [@layerparagraph2]="goneTitle">Actualmente dirijo el área de desarrollo software en <a href="https://moaw.co" target="_blank" class="moaw white">Moaw Solutions</a>, agencia creativa donde tratamos de resolver los problemas de nuestros clientes con las soluciones más innovadoras.</p>
         </div>
     </div>
     <div (click)="goDown()" class="arrow animated bounce">
@@ -20,17 +20,16 @@
 
     <div class="container">
         <div class="row col-sm-12">
-            <div class="col-lg-5 ml-auto">
+            <div class="col-lg-5 ml-auto text-block">
                 <hr class="section-heading-spacer">
                 <div class="clearfix"></div>
                 <h2 class="section-heading">Desarrollo Web y Móvil:<br>Mis puntos fuertes</h2>
-                <p class="lead">Me apasiona la arquitectura Fron-End, mis juguetes preferidos para llevarla a cabo son <a target="_blank" href="http://join.deathtothestockphoto.com/">Angular</a> en cualquiera de sus versiones, Ionic para móvil, y HTML5 y CSS3 para pintarlo
-                    todo!
+                <p class="lead">Me apasiona la arquitectura Fron-End, mis juguetes preferidos para llevarla a cabo son <a target="_blank" class="moaw" href="https://angular.io/">Angular</a> en cualquiera de sus versiones, <a target="_blank" class="moaw" href="https://ionicframework.com/">Ionic</a>                    para móvil, y HTML5 y CSS3 para pintarlo todo!
                 </p>
                 <p>Nunca dejo de aprender de este mundillo y cada vez me gusta más!</p>
             </div>
             <div class="col-lg-5 mr-auto">
-                <img class="img-fluid" src="./assets/img/ipad.png" alt="">
+                <img class="img-fluid" src="./assets/img/web_app.png" alt="">
             </div>
 
         </div>
@@ -39,20 +38,21 @@
 
 </section>
 
+
 <section class="content-section-b">
 
     <div class="container">
 
         <div class="row col-sm-12">
-            <div class="col-lg-5 mr-auto order-lg-2">
+            <div class="col-lg-5 mr-auto  text-block order-lg-2">
                 <hr class="section-heading-spacer">
                 <div class="clearfix"></div>
-                <h2 class="section-heading">3D Device Mockups<br>by PSDCovers</h2>
-                <p class="lead">Turn your 2D designs into high quality, 3D product shots in seconds using free Photoshop actions by
-                    <a target="_blank" href="http://www.psdcovers.com/">PSDCovers</a>! Visit their website to download some of their awesome, free photoshop actions!</p>
+                <h2 class="section-heading">Analisis, planificación y aprendizaje</h2>
+                <p class="lead">He trabajado con metodologías ágiles y tengo experiencia encabezando el departamento de desarrollo de una start-up, <a class="moaw" href="https://playmuser.com" target="_blank">Playmuser</a>.</p>
+                <p>Soy <a class="moaw">autodidacta</a>, pero me encanta rodearme de los mejores y aprender de ellos, no solamente de mi campo si no todo lo relacionado con la transformación digital.</p>
             </div>
             <div class="col-lg-5 ml-auto order-lg-1">
-                <img class="img-fluid" src="./assets/img/dog.png" alt="">
+                <img class="img-fluid" src="./assets/img/analisis.png" alt="">
             </div>
         </div>
 
@@ -62,21 +62,23 @@
 </section>
 <!-- /.content-section-b -->
 
+
 <section class="content-section-a">
 
     <div class="container">
 
         <div class="row col-sm-12">
-            <div class="col-lg-5 ml-auto">
+            <div class="col-lg-5 ml-auto text-block">
                 <hr class="section-heading-spacer">
                 <div class="clearfix"></div>
-                <h2 class="section-heading">Google Web Fonts and<br>Font Awesome Icons</h2>
-                <p class="lead">This template features the 'Lato' font, part of the
-                    <a target="_blank" href="http://www.google.com/fonts">Google Web Font library</a>, as well as
-                    <a target="_blank" href="http://fontawesome.io">icons from Font Awesome</a>.</p>
+                <h2 class="section-heading">Otras tecnologías y maneras de trabajar</h2>
+                <p class="lead">Dentro de mis tecnologías/frameworks/lenguajes favoritos se encuentran <a href="https://firebase.google.com/" target="_blank" class="moaw">Firebase</a>, sin duda un monstruo de la agilidad, <a href="https://www.mongodb.com/es" target="_blank"
+                        class="moaw">MongoDB</a> o <a class="moaw" target="_blank" href="https://www.android.com/">Android</a>.</p>
+                <p>Me encantan las soluciones que ofrece <a href="https://es.atlassian.com/" target="_blank" class="moaw">Atlassian</a>, Jira, Bitbucket, SourceTree, Bamboo, Trello..</p>
+                <p>No <a href="https://git-scm.com/" target="_blank" class="moaw">Git</a>, No work.</p>
             </div>
-            <div class="col-lg-5 mr-auto ">
-                <img class="img-fluid" src="./assets/img/phones.png" alt="">
+            <div class="col-lg-5 mr-auto order-lg-1">
+                <img class="img-fluid" src="./assets/img//laptop.png" alt="">
             </div>
         </div>
 
@@ -85,21 +87,71 @@
 
 </section>
 
+<section class="content-section-b">
+    <div class="container">
+        <div class="row col-sm-12">
+            <div class="col-lg-5 mr-auto  text-block order-lg-2">
+                <hr class="section-heading-spacer">
+                <div class="clearfix"></div>
+                <h2 class="section-heading">SEO & Web Analytics</h2>
+                <p class="lead">Me gusta el posicionamiento, al menos la parte tocante al desarrollo web. Siempre trato de optimizar mis sitios pensando en los motores de búsqueda: rendimiento, estructura html, microdata, semantics, links, optimización de assets... </p>
+                <p class="lead">También configuro <a class="moaw">Analytics</a> en mis sitios web, al fin y al cabo, algo no se puede mejorar si no se puede medir.</p>
+            </div>
+            <div class="col-lg-5 ml-auto">
+                <img class="img-fluid" src="./assets/img/seo.png" alt="">
+            </div>
+
+        </div>
+    </div>
+    <!-- /.container -->
+
+</section>
+
+<section class="content-section-a">
+    <div class="container ">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 id="notodo"></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div (click)="showTravels()" class="arrow animated bounce extra">
+                <img width="80" height="80" alt="" src="assets/img/arrow-black.svg" />
+            </div>
+        </div>
+    </div>
+</section>
 
 
-<section class="p-0" id="portfolio">
+<section [@layertravels]="showingtravels" [hidden]="!showtravels" class="content-section-b" id="about">
+    <div class="container ">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="section-heading ">Mi gran pasión! Viajar!</h2>
+                <p>No todo en esta vida es trabajo.<br> Salir de la rutina, conocer nuevas culturas, abrir la mente, disfrutar, sentir, vivir!<br> Todo esto te lo da el coger la mochila y viajar por cualquier sitio, sin excusas.</p>
+                <hr class="light white">
+                <p>"No hay hombre más completo que aquel que ha viajado mucho, que ha cambiado veinte veces de forma de pensar y de vivir."</p>
+                <p class="author">Alphonse de Lamartine</p>
+                <hr class="light white">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section [@layertravels2]="showingtravels" [hidden]="!showtravels" class="p-0" id="portfolio">
     <div class="container-fluid">
         <div class="row no-gutter popup-gallery">
             <div class="col-lg-4 col-sm-6">
                 <a class="portfolio-box">
-                    <img class="img-fluid" src="./assets/img/portfolio/thumbnails/1.jpg" alt="">
+                    <img class="img-fluid" src="./assets/img/thailandia.jpg" alt="">
                     <div class="portfolio-box-caption">
                         <div class="portfolio-box-caption-content">
                             <div class="project-category text-faded">
-                                Category
+                                Thailandia
                             </div>
                             <div class="project-name">
-                                Project Name
+                                Phi Phi islands
                             </div>
                         </div>
                     </div>
@@ -107,14 +159,14 @@
             </div>
             <div class="col-lg-4 col-sm-6">
                 <a class="portfolio-box">
-                    <img class="img-fluid" src="./assets/img/portfolio/thumbnails/2.jpg" alt="">
+                    <img class="img-fluid" src="./assets/img/amsterdam.jpg" alt="">
                     <div class="portfolio-box-caption">
                         <div class="portfolio-box-caption-content">
                             <div class="project-category text-faded">
-                                Category
+                                Países Bajos
                             </div>
                             <div class="project-name">
-                                Project Name
+                                Amsterdam
                             </div>
                         </div>
                     </div>
@@ -122,14 +174,14 @@
             </div>
             <div class="col-lg-4 col-sm-6">
                 <a class="portfolio-box">
-                    <img class="img-fluid" src="./assets/img/portfolio/thumbnails/3.jpg" alt="">
+                    <img class="img-fluid" src="./assets/img/rabat.jpg" alt="">
                     <div class="portfolio-box-caption">
                         <div class="portfolio-box-caption-content">
                             <div class="project-category text-faded">
-                                Category
+                                Marruecos
                             </div>
                             <div class="project-name">
-                                Project Name
+                                Rabat
                             </div>
                         </div>
                     </div>
@@ -137,14 +189,14 @@
             </div>
             <div class="col-lg-4 col-sm-6">
                 <a class="portfolio-box">
-                    <img class="img-fluid" src="./assets/img/portfolio/thumbnails/4.jpg" alt="">
+                    <img class="img-fluid" src="./assets/img/paris.jpg" alt="">
                     <div class="portfolio-box-caption">
                         <div class="portfolio-box-caption-content">
                             <div class="project-category text-faded">
-                                Category
+                                Francia
                             </div>
                             <div class="project-name">
-                                Project Name
+                                Paris
                             </div>
                         </div>
                     </div>
@@ -152,14 +204,14 @@
             </div>
             <div class="col-lg-4 col-sm-6">
                 <a class="portfolio-box">
-                    <img class="img-fluid" src="./assets/img/portfolio/thumbnails/5.jpg" alt="">
+                    <img class="img-fluid" src="./assets/img/mexico.jpg" alt="">
                     <div class="portfolio-box-caption">
                         <div class="portfolio-box-caption-content">
                             <div class="project-category text-faded">
-                                Category
+                                México
                             </div>
                             <div class="project-name">
-                                Project Name
+                                Chichen Itza
                             </div>
                         </div>
                     </div>
@@ -167,18 +219,28 @@
             </div>
             <div class="col-lg-4 col-sm-6">
                 <a class="portfolio-box">
-                    <img class="img-fluid" src="./assets/img/portfolio/thumbnails/6.jpg" alt="">
+                    <img class="img-fluid" src="./assets/img/brujas.jpg" alt="">
                     <div class="portfolio-box-caption">
                         <div class="portfolio-box-caption-content">
                             <div class="project-category text-faded">
-                                Category
+                                Bélgica
                             </div>
                             <div class="project-name">
-                                Project Name
+                                Brujas
                             </div>
                         </div>
                     </div>
                 </a>
+            </div>
+        </div>
+    </div>
+</section>
+<section [@layertravels3]="showingtravels" [hidden]="!showtravels" class="content-section-b pb-150" id="about">
+    <div class="container ">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="section-heading ">Algunos de mis viajes.</h2>
+                <p>Estos son algunos de los viajes que más he disfrutado de una pequeña lista que no parará de crecer...</p>
             </div>
         </div>
     </div>

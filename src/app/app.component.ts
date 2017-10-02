@@ -1,6 +1,6 @@
 import { Component, ViewChild, AfterViewInit, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
-
+import {Location, LocationStrategy, PathLocationStrategy} from '@angular/common';
 
 
 
@@ -18,7 +18,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   @ViewChild('p') popup: any;
   @ViewChild('pCookies') popupCookies: any;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private location: Location) { }
 
   ngAfterViewInit(): void {
     setTimeout(() => {
@@ -63,6 +63,13 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
 
+  isActive(path) {
+    return this.location.path() === path;
+  }
+
+  isActiveHome(path) {
+    return this.location.path() !== '/about';
+  }
 
   ngOnInit(): void {
     this.router.events.subscribe((evt) => {

@@ -1,3 +1,4 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { routes } from './app.routes';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -7,7 +8,6 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { LuckyComponent } from './components/lucky/lucky.component';
-
 
 @NgModule({
   declarations: [
@@ -19,6 +19,7 @@ import { LuckyComponent } from './components/lucky/lucky.component';
   imports: [
     RouterModule.forRoot(routes), // configuración para el módulo raíz
     BrowserModule,
+    BrowserAnimationsModule,
     NgbModule.forRoot(), // Add Bootstrap module here.
   ],
   providers: [],

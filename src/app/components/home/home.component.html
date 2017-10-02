@@ -13,12 +13,15 @@
     </div>
 </div>
 <div class="container-input">
-    <input>
+    <input (keyup.enter)="showLucky()">
 </div>
 <div class="container-buttons">
-    <input class="button" value="Buscar con Google" type="submit">
+    <input class="button" (click)="showLucky()" value="Buscar con Google" type="submit">
     <input class="button" (click)="showLucky()" [value]="textButton" type="submit">
 </div>
+<!-- <div class="container-input">
+    <div id="paypal-button"></div>
+</div> -->
 
 
 <app-lucky *ngIf="show" [show]="show"></app-lucky>
