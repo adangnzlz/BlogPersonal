@@ -1,3 +1,10 @@
+
+
+if (!process.argv[2]){
+    console.log("Escribe el texto asociado al commit");
+    return;
+}
+
 var copy = require('directory-copy')
 copy(
     {
