@@ -1,0 +1,107 @@
+<app-header-about>
+
+</app-header-about>
+
+
+<app-section [contentSection]="'content-section-a'" [img]="'./assets/img/web_app.png'">
+    <h2 class="section-heading">Desarrollo Web y Móvil:
+        <br>Mis puntos fuertes</h2>
+    <p class="lead">Me apasiona la arquitectura Fron-End, mis juguetes preferidos para llevarla a cabo son
+        <a target="_blank" class="moaw" href="https://angular.io/">Angular</a> en cualquiera de sus versiones,
+        <a target="_blank" class="moaw" href="https://ionicframework.com/">Ionic</a> para móvil, y HTML5 y CSS3 para pintarlo todo!
+    </p>
+    <p>Nunca dejo de aprender de este mundillo y cada vez me gusta más!</p>
+</app-section>
+
+<app-section [contentSection]="'content-section-b'" [right]="true" [img]="'./assets/img/analisis.png'">
+    <h2 class="section-heading">Analisis, planificación y aprendizaje</h2>
+    <p class="lead">He trabajado con metodologías ágiles y tengo experiencia encabezando el departamento de desarrollo de una start-up,
+        <a class="moaw" href="https://playmuser.com" target="_blank">Playmuser</a>.</p>
+    <p>Soy
+        <a class="moaw">autodidacta</a>, pero me encanta rodearme de los mejores y aprender de ellos, no solamente de mi campo si no todo
+        lo relacionado con la transformación digital.</p>
+</app-section>
+
+<app-section [contentSection]="'content-section-a'" [img]="'./assets/img/laptop.png'">
+    <h2 class="section-heading">Otras tecnologías y maneras de trabajar</h2>
+    <p class="lead">Dentro de mis tecnologías/frameworks/lenguajes favoritos se encuentran
+        <a href="https://firebase.google.com/" target="_blank" class="moaw">Firebase</a>, sin duda un monstruo de la agilidad,
+        <a href="https://www.mongodb.com/es" target="_blank" class="moaw">MongoDB</a> o
+        <a class="moaw" target="_blank" href="https://www.android.com/">Android</a>.</p>
+    <p>Me encantan las soluciones que ofrece
+        <a href="https://es.atlassian.com/" target="_blank" class="moaw">Atlassian</a>, Jira, Bitbucket, SourceTree, Bamboo, Trello..</p>
+    <p>No
+        <a href="https://git-scm.com/" target="_blank" class="moaw">Git</a>, No work.</p>
+</app-section>
+
+
+<app-section [contentSection]="'content-section-b'" [right]="true" [img]="'./assets/img/seo.png'">
+    <h2 class="section-heading">SEO & Web Analytics</h2>
+    <p class="lead">Me gusta el posicionamiento, al menos la parte tocante al desarrollo web. Siempre trato de optimizar mis sitios pensando
+        en los motores de búsqueda: rendimiento, estructura html, microdata, semantics, links, optimización de assets...
+        </p>
+    <p class="lead">También configuro
+        <a class="moaw">Analytics</a> en mis sitios web, al fin y al cabo, algo no se puede mejorar si no se puede medir.</p>
+</app-section>
+
+
+<section class="content-section-a">
+    <div class="container ">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 id="notodo"></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div (click)="showTravels()" class="arrow animated bounce extra">
+                <img width="80" height="80" alt="" src="assets/img/arrow-black.svg" />
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section [@layertravels]="showingtravels" [hidden]="!showtravels" class="content-section-b" id="about">
+    <div class="container ">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="section-heading ">Mi gran pasión! Viajar!</h2>
+                <p>No todo en esta vida es trabajo.
+                    <br> Salir de la rutina, conocer nuevas culturas, abrir la mente, disfrutar, sentir, vivir!
+                    <br> Todo esto te lo da el coger la mochila y viajar por cualquier sitio, sin excusas.</p>
+                <hr class="light white">
+                <p>"No hay hombre más completo que aquel que ha viajado mucho, que ha cambiado veinte veces de forma de pensar
+                    y de vivir."</p>
+                <p class="author">Alphonse de Lamartine</p>
+                <hr class="light white">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section [@layertravels2]="showingtravels" [hidden]="!showtravels" class="p-0" id="portfolio">
+    <div class="container-fluid">
+        <div class="row no-gutter popup-gallery">
+            <app-country-card class="col-lg-4 col-sm-6" [pais]="'Thailandia'" [lugar]="'Phi Phi islands'" [img]="'./assets/img/thailandia.jpg'"></app-country-card>
+            <app-country-card class="col-lg-4 col-sm-6" [pais]="'Países Bajos'" [lugar]="'Amsterdam'" [img]="'./assets/img/amsterdam.jpg'"></app-country-card>
+            <app-country-card class="col-lg-4 col-sm-6" [pais]="'Marruecos'" [lugar]="'Rabat'" [img]="'./assets/img/rabat.jpg'"></app-country-card>
+            <app-country-card class="col-lg-4 col-sm-6" [pais]="'Francia'" [lugar]="'Paris'" [img]="'./assets/img/paris.jpg'"></app-country-card>
+            <app-country-card class="col-lg-4 col-sm-6" [pais]="'México'" [lugar]="'Chichen Itza'" [img]="'./assets/img/mexico.jpg'"></app-country-card>
+            <app-country-card class="col-lg-4 col-sm-6" [pais]="'Bélgica'" [lugar]="'Brujas'" [img]="'./assets/img/brujas.jpg'"></app-country-card>
+        </div>
+    </div>
+</section>
+<section [@layertravels3]="showingtravels" [hidden]="!showtravels" class="content-section-b pb-150" id="about">
+    <div class="container ">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="section-heading ">Algunos de mis viajes.</h2>
+                <p>Estos son algunos de los viajes que más he disfrutado de una pequeña lista que no parará de crecer...</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<app-footer [position]="'relative'">
+</app-footer>

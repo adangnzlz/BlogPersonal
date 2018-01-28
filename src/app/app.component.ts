@@ -11,65 +11,11 @@ declare var $: any;
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit, AfterViewInit {
-  closeResult: string;
-  acceptCookies: boolean;
+export class AppComponent implements OnInit {
+
   title = 'app';
-  @ViewChild('p') popup: any;
-  @ViewChild('pCookies') popupCookies: any;
 
   constructor(private router: Router, private location: Location) { }
-
-  ngAfterViewInit(): void {
-    setTimeout(() => {
-      if (localStorage.acceptCookies !== 'true') {
-        this.popupCookies.open();
-      } else {
-        this.acceptCookies = true;
-      }
-    }, 1000);
-  }
-
-
-  onContact() {
-    window.location.href = 'mailto:adan.gonzalez.lopez@gmail.com?subject=Contacto desde Portfolio';
-  }
-
-  checkIfClose() {
-    if (this.popup.isOpen()) {
-      this.popup.close();
-    }
-  }
-
-  onAcceptCookies() {
-    this.acceptCookies = true;
-    localStorage.removeItem('acceptCookies');
-    localStorage.setItem('acceptCookies', 'true');
-    this.popupCookies.close();
-  }
-
-  toggleCookies() {
-    if (this.acceptCookies) {
-      this.popupCookies.toggle();
-    } else {
-      this.popupCookies.open();
-    }
-  }
-
-  closeCookies() {
-    if (this.acceptCookies) {
-      this.popupCookies.close();
-    }
-  }
-
-
-  isActive(path) {
-    return this.location.path() === path;
-  }
-
-  isActiveHome(path) {
-    return this.location.path() !== '/about';
-  }
 
   ngOnInit(): void {
     this.router.events.subscribe((evt) => {

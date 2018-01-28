@@ -4,12 +4,12 @@
             <mark class="blue">A</mark>
             <mark class="red">d</mark>
             <mark class="yellow">a</mark>
-            <mark class="blue bottom">a</mark>
-            <mark class="green left">á</mark>
-            <mark class="red">n</mark>
+            <mark class="blue ">a</mark>
+            <mark class="green bottom">á</mark>
+            <mark class="red left">n</mark>
         </h1>
-        <h3 class="subtitle first-letter">G</h3>
-        <h3 class="subtitle">licia</h3>
+        <h3 class="subtitle first-letter">Gonz</h3>
+        <h3 class="subtitle">lez</h3>
     </div>
 </div>
 <div class="container-input">
@@ -19,9 +19,7 @@
     <input class="button" (click)="showLucky()" value="Buscar con Google" type="submit">
     <input class="button" (click)="showLucky()" [value]="textButton" type="submit">
 </div>
-<!-- <div class="container-input">
-    <div id="paypal-button"></div>
-</div> -->
-
 
 <app-lucky *ngIf="show" [show]="show"></app-lucky>
+<app-footer>
+</app-footer>

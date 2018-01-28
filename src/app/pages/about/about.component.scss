@@ -1,3 +1,5 @@
+
+
 body,
 html {
     width: 100%;
@@ -15,63 +17,6 @@ h6 {
     font-weight: 700;
 }
 
-.intro-header {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    text-align: center;
-    color: #f8f8f8;
-    background: url('../../../assets/img/background-ski2.jpg') no-repeat center center;
-    background-size: cover;
-    z-index: -1;
-    margin-top: 58px;
-}
-
-.intro-message {
-    position: relative;
-    padding-top: 20%;
-    padding-bottom: 20%;
-}
-
-.intro-message>h1 {
-    margin: 0;
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
-    font-size: 5em;
-}
-
-.intro-divider {
-    width: 400px;
-    border-top: 1px solid #f8f8f8;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-}
-
-.intro-message>h3 {
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
-    display: inline-block;
-}
-
-.intro-social-buttons i {
-    font-size: 80%;
-}
-
-@media(max-width:767px) {
-    .intro-message {
-        padding-bottom: 15%;
-    }
-    .intro-message>h1 {
-        font-size: 3em;
-    }
-    ul.intro-social-buttons>li {
-        display: block;
-        margin-bottom: 20px;
-        padding: 0;
-    }
-    ul.intro-social-buttons>li:last-child {
-        margin-bottom: 0;
-    }
-    .intro-divider {
-        width: 100%;
-    }
-}
 
 .network-name {
     text-transform: uppercase;
@@ -171,28 +116,7 @@ a {
     font-size: 18px!important;
 }
 
-.overlay {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    background-color: hsla(0, 0%, 0%, 0.72);
-    margin-top: -50px;
-}
 
-.subtitle {
-    min-height: 20px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    @media (min-width: 767px) {
-        margin-left: 150px;
-    }
-}
-
-.container {
-    &.header {
-        margin-top: -50px;
-    }
-}
 
 body {
     background: black;
@@ -409,9 +333,7 @@ p {
     }
 }
 
-.pb-150 {
-    padding-bottom: 150px;
-}
+
 
 @media (max-width: 1024px) {
     .text-block {
