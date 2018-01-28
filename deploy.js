@@ -19,7 +19,7 @@ copy(
             'git add *',
             function (err, data, stderr) {
                 cmd.get(
-                    'git commit -m  "deploy"',
+                    'git commit -m ' + process.argv[2],
                     function (err, data, stderr) {
                         cmd.get(
                             'git push',

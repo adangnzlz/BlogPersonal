@@ -8,8 +8,8 @@
         "build": "ng build",
         "test": "ng test",
         "lint": "ng lint",
-        "deploy": "ng build --prod --base-href /blog/ && ngh",
-        "e2e": "ng e2e"
+        "e2e": "ng e2e",
+        "deploy": "node deploy.js"
     },
     "private": true,
     "dependencies": {
