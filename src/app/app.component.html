@@ -9,7 +9,7 @@
             <a [ngClass]="pCookies.isOpen() ? 'link arrow notifications1' : 'link notifications1'" [ngbPopover]="popupCookies" triggers="manual" #pCookies="ngbPopover" (click)="p.close(); toggleCookies();  p3.close()" placement="bottom"><img class="notifications" src="assets/img/notifications.svg"></a>
         </li>
         <li>
-            <a [ngClass]="p.isOpen() ? 'link arrow avatar1' : 'link avatar1'" [ngbPopover]="popupProfile" triggers="manual" #p="ngbPopover" (click)="p.toggle();  p3.close(); closeCookies()" placement="bottom"><img src="https://lh3.googleusercontent.com/-o9yhc_bwtEg/AAAAAAAAAAI/AAAAAAAAAAA/AI6yGXxlhn1MmccyMEmeqzozxlbg4UuY0A/s32-c-mo-md/photo.jpg"></a>
+            <a [ngClass]="p.isOpen() ? 'link arrow avatar1' : 'link avatar1'" [ngbPopover]="popupProfile" triggers="manual" #p="ngbPopover" (click)="p.toggle();  p3.close(); closeCookies()" placement="bottom"><img height="25" src="./assets/img/profile.png"></a>
         </li>
     </ul>
 </header>
@@ -19,7 +19,7 @@
     <router-outlet></router-outlet>
     <ng-template id="popupProfile" #popupProfile>
         <div>
-            <img height="75" [ngbPopover]="popAvatar" triggers="manual" #p2="ngbPopover" (click)="p2.open()" placement="down" class="avatar-popup" src="https://lh3.googleusercontent.com/-o9yhc_bwtEg/AAAAAAAAAAI/AAAAAAAAAAA/AI6yGXxlhn1MmccyMEmeqzozxlbg4UuY0A/s96-c-mo-md/photo.jpg">
+            <img height="75" [ngbPopover]="popAvatar" triggers="manual" #p2="ngbPopover" (click)="p2.open()" placement="down" class="avatar-popup" src="./assets/img/profile.png">
             <div class="popup-info">
                 <p>Adán González López</p>
                 <div><a href="mail:adan.gonzalez.lopez@gmail.com">adan.gonzalez.lopez@gmail.com</a></div>
