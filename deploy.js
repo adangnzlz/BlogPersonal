@@ -1,6 +1,6 @@
 
-
-if (!process.argv[2]){
+var cmd = require('node-cmd');
+if (!process.argv[2]) {
     console.log("Escribe el texto asociado al commit");
     return;
 }
@@ -9,34 +9,31 @@ var copy = require('directory-copy')
 copy(
     {
         src: 'dist'
-        , dest:  './../adangnzlz.github.io'
+        , dest: './../adangnzlz.github.io'
         , excludes: [/^\./] // Exclude hidden files 
     }
     , function () {
         console.log('done!')
-        var cmd = require('node-cmd');
-        cmd.get(
-            'git add *',
-            function (err, data, stderr) {
-                cmd.get(
-                    'git commit -m ' + process.argv[2],
-                    function (err, data, stderr) {
-                        cmd.get(
-                            'git push',
-                            function (err, data, stderr) {
-                                console.log('pushed all', data)
-                            }
-                        );
-                    }
-                );
-            }
-        );
+      
+        cmd.get('git add *', commit());
 
 
-        
+
     })
     .on('log', function (msg, level) {
         // Level is debug, info, warn or error 
         console.log(level + ': ' + msg)
     })
 
+function commit() {
+    cmd.get(
+        'git commit -m ' + process.argv[2], push()
+    );
+}
+
+function push() {
+
+    cmd.get('git push', function (err, data, stderr) {
+        console.log('pushed all', data)
+    });
+}
