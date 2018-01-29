@@ -1,20 +1,22 @@
 
 var cmd = require('node-cmd');
-// if (!process.argv[2]) {
-//     console.log("Escribe el texto asociado al commit");
-//     return;
-// }
+if (!process.argv[2]) {
+    console.log("Escribe el texto asociado al commit");
+    return;
+}
 
 var copy = require('directory-copy')
 
-
-
-cmd.get('ng build --prod', copiar());
+var comando = 'ng build --prod';
+console.log(comando);
+cmd.get(comando, copiar());
 
 
 
 function copiar() {
     console.log('builded');
+    var comando = 'copy';
+    console.log(comando);
     copy(
         {
             src: 'dist'
@@ -36,19 +38,28 @@ function copiar() {
 }
 
 function add() {
-    
-    cmd.get('git add *', commit());
+    var comando = 'git add *';
+    console.log(comando);
+    cmd.get(comando, commit());
 }
 function commit() {
     console.log('added');
-    cmd.get(
-        'git commit -m ' + process.argv[2], push()
+    var comando = "git commit -m " + process.argv[2];
+    console.log(comando);
+    cmd.get(comando, function (err, data, stderr) {
+        console.log(err)
+        console.log(data)
+        console.log(stderr)
+        push();
+    } 
     );
 }
 
 function push() {
     console.log('commited');
-    cmd.get('git push', function (err, data, stderr) {
-        console.log('pushed all', data)
+    var comando = 'git push';
+    console.log(comando);
+    cmd.get(comando, function (err, data, stderr) {
+        console.log('pushing', data)
     });
 }
