@@ -7,14 +7,11 @@ if (!process.argv[2]) {
 
 var copy = require('directory-copy')
 
-var comando = 'ng build --prod';
-console.log(comando);
-cmd.get(comando, copiar());
+copiar();
 
 
 
 function copiar() {
-    console.log('builded');
     var comando = 'copy';
     console.log(comando);
     copy(
