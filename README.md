@@ -30,3 +30,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ng build --prod --base-href "https://adangnzlz.github.io/blog/"
 ngh
+
+
+
+## add all, commit and push with text
+
+npm run deploy "texto a incluir en el commit"
