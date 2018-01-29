@@ -38,7 +38,7 @@ function add() {
 }
 function commit() {
     console.log('added');
-    var comando = "git commit -m " + process.argv[2] + process.argv[3] + process.argv[4];
+    var comando = "git commit -m " + process.argv[2];
     console.log(comando);
     cmd.get(comando, function (err, data, stderr) {
         console.log(data)
@@ -53,6 +53,9 @@ function push() {
     cmd.get(comando, function (err, data, stderr) {
         console.log(data)
         console.log('pushed');
+        md.get('cd adangnzlz.github.io', function (err, data, stderr) {
+            console.log(data)
+        });
     });
 }
 
