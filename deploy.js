@@ -1,9 +1,16 @@
 
 var cmd = require('node-cmd');
+var params = '';
 if (!process.argv[2]) {
     console.log("Escribe el texto asociado al commit");
     return;
+}else{
+    for (let i = 2; i < process.argv.length; i++) {
+        params += process.argv[i] + ' ';
+        
+    }
 }
+console.log(params);
 
 var copy = require('directory-copy')
 
