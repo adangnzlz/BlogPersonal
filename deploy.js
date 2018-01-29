@@ -1,21 +1,21 @@
 
 var cmd = require('node-cmd');
-if (!process.argv[2]) {
-    console.log("Escribe el texto asociado al commit");
-    return;
-}
+// if (!process.argv[2]) {
+//     console.log("Escribe el texto asociado al commit");
+//     return;
+// }
 
 var copy = require('directory-copy')
 copy(
     {
         src: 'dist'
-        , dest: './../adangnzlz.github.io'
+        , dest: 'adangnzlz.github.io'
         , excludes: [/^\./] // Exclude hidden files 
     }
     , function () {
         console.log('done!')
       
-        cmd.get('git add *', commit());
+        // cmd.get('git add *', commit());
 
 
 

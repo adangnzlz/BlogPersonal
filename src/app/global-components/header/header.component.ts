@@ -33,7 +33,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     return this.location.path() === path;
   }
 
-  isActiveHome(path) {
+  isActiveHome() {
     return this.location.path() !== '/about';
   }
   onContact() {
