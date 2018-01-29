@@ -54,7 +54,9 @@ function push() {
         console.log(data)
         console.log('pushed');
         cmd.get('cd adangnzlz.github.io', function (err, data, stderr) {
-            console.log(data)
+            cmd.get('ls', function (err, data, stderr) {
+                console.log(data)
+            });
         });
     });
 }
