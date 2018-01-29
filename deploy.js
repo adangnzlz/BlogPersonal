@@ -45,7 +45,6 @@ function commit() {
     }
     );
 }
-
 function push() {
     console.log('commited');
     var comando = 'git push';
