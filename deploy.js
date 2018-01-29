@@ -51,11 +51,7 @@ function push() {
     var comando = 'git push';
     console.log(comando);
     cmd.get(comando, function (err, data, stderr) {
-        console.log(data)
         console.log('pushed');
-        cmd.get('node ./adangnzlz.github.io/deploy.js ' + process.argv[2], function (err, data, stderr) {
-            console.log(data)
-        });
     });
 }
 
