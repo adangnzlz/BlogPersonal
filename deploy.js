@@ -37,18 +37,21 @@ function copiar() {
 function add() {
     var comando = 'git add *';
     console.log(comando);
-    cmd.get(comando, commit());
+    cmd.get(comando, function (err, data, stderr) {
+        console.log(err)
+        console.log(data)
+        console.log(stderr)
+        commit();
+    });
 }
 function commit() {
     console.log('added');
     var comando = "git commit -m " + process.argv[2];
     console.log(comando);
     cmd.get(comando, function (err, data, stderr) {
-        console.log(err)
         console.log(data)
-        console.log(stderr)
         push();
-    } 
+    }
     );
 }
 
@@ -57,6 +60,9 @@ function push() {
     var comando = 'git push';
     console.log(comando);
     cmd.get(comando, function (err, data, stderr) {
-        console.log('pushing', data)
+        console.log(err)
+        console.log(data)
+        console.log(stderr)
+        console.log('pushed');
     });
 }
