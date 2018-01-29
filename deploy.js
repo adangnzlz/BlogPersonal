@@ -23,13 +23,8 @@ function copiar() {
         , function () {
             console.log('copied')
             add();
-
-
-
-
         })
         .on('log', function (msg, level) {
-            // Level is debug, info, warn or error 
             console.log(level + ': ' + msg)
         })
 }
@@ -38,9 +33,7 @@ function add() {
     var comando = 'git add *';
     console.log(comando);
     cmd.get(comando, function (err, data, stderr) {
-        console.log(err)
         console.log(data)
-        console.log(stderr)
         commit();
     });
 }
@@ -60,9 +53,7 @@ function push() {
     var comando = 'git push';
     console.log(comando);
     cmd.get(comando, function (err, data, stderr) {
-        console.log(err)
         console.log(data)
-        console.log(stderr)
         console.log('pushed');
     });
 }
