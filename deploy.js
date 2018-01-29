@@ -53,10 +53,8 @@ function push() {
     cmd.get(comando, function (err, data, stderr) {
         console.log(data)
         console.log('pushed');
-        cmd.get('cd adangnzlz.github.io', function (err, data, stderr) {
-            cmd.get('ls', function (err, data, stderr) {
-                console.log(data)
-            });
+        cmd.get('cd adangnzlz.github.io git status', function (err, data, stderr) {
+            console.log(data)
         });
     });
 }
