@@ -21,7 +21,7 @@
     <li>
       <a [ngClass]="p.isOpen() ? 'link arrow avatar1' : 'link avatar1'" [ngbPopover]="popupProfile" triggers="manual" #p="ngbPopover"
         (click)="p.toggle();  p3.close(); closeCookies()" placement="bottom">
-        <img height="25" src="./assets/img/profile.png">
+        <img height="25" src="./assets/img/adan-gonzalez-lopez.png">
       </a>
     </li>
   </ul>
@@ -29,7 +29,7 @@
 <ng-template id="popupProfile" #popupProfile>
   <div>
     <img height="65" [ngbPopover]="popAvatar" triggers="manual" #p2="ngbPopover" (click)="p2.open()" placement="down" class="avatar-popup"
-      src="./assets/img/profile.png">
+      src="./assets/img/adan-gonzalez-lopez.png">
     <div class="popup-info">
       <p>Adán González López</p>
       <div>
