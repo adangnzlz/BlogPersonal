@@ -5,11 +5,10 @@
     "scripts": {
         "ng": "ng",
         "start": "ng serve --aot",
-        "build": "ng build ",
+        "build": "ng build --prod --aot --no-sourcemap",
         "test": "ng test",
         "lint": "ng lint",
         "e2e": "ng e2e",
-        "predeploy": "ng build --prod --aot",
         "deploy": "node deploy.js"
     },
     "private": true,
