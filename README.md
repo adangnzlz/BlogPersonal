@@ -35,4 +35,9 @@ ngh
 
 ## add all, commit and push with text
 
+npm run build
 npm run deploy "texto a incluir en el commit"
+cd adangnzlz.github.io
+git add, git commit, git push
+
+
