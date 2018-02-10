@@ -1,6 +1,5 @@
 @import './assets/css/awesome.scss';
 @import './assets/css/bootstrap.scss';
-
 #wptime-plugin-preloader {
     position: fixed;
     left: 0px;
@@ -248,4 +247,8 @@ textarea {
 
 .pb-150 {
     padding-bottom: 150px;
+}
+
+.pt-10 {
+    padding-top: 10px;
 }
