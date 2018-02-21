@@ -13,6 +13,7 @@ import { HeaderAboutComponent } from 'app/pages/about/components/header-about/he
 import { FooterComponent } from 'app/global-components/footer/footer.component';
 import { SectionComponent } from './pages/about/components/section/section.component';
 import { CountryCardComponent } from './pages/about/components/country-card/country-card.component';
+import { GalleryComponent } from './pages/about/components/gallery/gallery.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { CountryCardComponent } from './pages/about/components/country-card/coun
     FooterComponent,
     HeaderAboutComponent,
     SectionComponent,
-    CountryCardComponent
+    CountryCardComponent,
+    GalleryComponent
   ],
   imports: [
     RouterModule.forRoot(routes), // configuración para el módulo raíz

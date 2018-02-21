@@ -1,5 +1,3 @@
-
-
 body,
 html {
     width: 100%;
@@ -16,7 +14,6 @@ h6 {
     font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
 }
-
 
 .network-name {
     text-transform: uppercase;
@@ -115,8 +112,6 @@ p {
 a {
     font-size: 18px!important;
 }
-
-
 
 body {
     background: black;
@@ -333,8 +328,6 @@ p {
     }
 }
 
-
-
 @media (max-width: 1024px) {
     .text-block {
         margin-bottom: 50px;
@@ -344,4 +337,10 @@ p {
 .about {
     opacity: 0;
     transition: all 1s;
+}
+
+.close {
+    background: none;
+    color: black;
+    border: 0;
 }

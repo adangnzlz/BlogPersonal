@@ -50,7 +50,7 @@ export class AboutComponent implements OnInit, AfterViewInit {
   private startTyping() {
     // tslint:disable-next-line:no-unused-expression
     new Typed('#typing', {
-      strings: ['#Front-End Architect', '#Web', '#App', '#FullStack Developer'],
+      strings: ['#Front-End Architect', '#Web', '#App', '#Front-End Engineer'],
       typeSpeed: 70,
       backSpeed: 40,
       loop: false,
