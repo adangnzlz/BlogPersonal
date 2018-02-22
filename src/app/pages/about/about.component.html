@@ -2,8 +2,7 @@
 
 </app-header-about>
 
-<!-- 
-<app-gallery></app-gallery> -->
+
 
 <app-section [contentSection]="'content-section-a'" [img]="'./assets/img/web_app.png'">
     <h2 class="section-heading">Desarrollo Web y Móvil:
@@ -84,7 +83,9 @@
 
 
 <section [@layertravels2]="showingtravels" [hidden]="!showtravels" class="p-0" id="portfolio">
-    <div class="container-fluid">
+
+    <app-gallery></app-gallery>
+    <!-- <div class="container-fluid">
         <div class="row no-gutter popup-gallery">
             <app-country-card class="col-lg-4 col-sm-6" [pais]="'Thailandia'" [lugar]="'Phi Phi islands'" [img]="'./assets/img/thailandia.jpg'"></app-country-card>
             <app-country-card class="col-lg-4 col-sm-6" [pais]="'Sahara'" [lugar]="'Merzouga'" [img]="'./assets/img/merzouga.png'"></app-country-card>
@@ -96,9 +97,9 @@
             <app-country-card class="col-lg-4 col-sm-6" [pais]="'Bulgaria'" [lugar]="'Veliko Tarnovo'" [img]="'./assets/img/veliko-tarnovo.jpg'"></app-country-card>
             <app-country-card class="col-lg-4 col-sm-6" [pais]="'Marruecos'" [lugar]="'Rabat'" [img]="'./assets/img/rabat.jpg'"></app-country-card>
         </div>
-    </div>
+    </div> -->
 </section>
-<section [@layertravels3]="showingtravels" [hidden]="!showtravels" class="content-section-b pb-150" id="about">
+<section [@layertravels3]="showingtravels" [hidden]="!showtravels" class="content-section-b pt-10 pb-150" id="about">
     <div class="container ">
         <div class="row">
             <div class="col-lg-8 mx-auto text-center">

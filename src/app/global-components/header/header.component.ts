@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
   }
-  
+
   ngAfterViewInit(): void {
     setTimeout(() => {
       if (localStorage.acceptCookies !== 'true') {
