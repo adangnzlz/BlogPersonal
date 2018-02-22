@@ -16,6 +16,8 @@ h6 {
 }
 
 .intro-header {
+    opacity: 0;
+    transition: all 0.2s;
     padding-top: 50px;
     padding-bottom: 50px;
     text-align: center;
@@ -24,6 +26,9 @@ h6 {
     background-size: cover;
     z-index: -1;
     margin-top: 58px;
+    &.loaded{
+        opacity: 1;
+    }
 }
 
 

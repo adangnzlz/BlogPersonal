@@ -14,6 +14,7 @@ declare var $;
 })
 export class HeaderAboutComponent implements OnInit, AfterViewInit {
   goneTitle = 'on';
+  loaded = false;
   constructor() { }
 
   ngOnInit() {
