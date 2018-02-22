@@ -16,23 +16,20 @@ h6 {
 }
 
 .intro-header {
-    opacity: 0;
+    // opacity: 0;
     transition: all 0.2s;
     padding-top: 50px;
     padding-bottom: 50px;
     text-align: center;
     color: #f8f8f8;
-    background: url('../../../../../assets/img/background-ski2.jpg') no-repeat center center;
+    background: url('http://res.cloudinary.com/dpjjopbzp/image/upload/v1519322171/background-ski2_sfalav.jpg') no-repeat center center;
     background-size: cover;
     z-index: -1;
     margin-top: 58px;
-    &.loaded{
-        opacity: 1;
-    }
+    // &.loaded {
+    //     opacity: 1;
+    // }
 }
-
-
-
 
 .intro-message {
     position: relative;
@@ -45,7 +42,6 @@ h6 {
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
     font-size: 5em;
 }
-
 
 .intro-divider {
     width: 400px;
@@ -82,8 +78,6 @@ h6 {
     }
 }
 
-
-
 .subtitle {
     min-height: 20px;
     margin-top: 0px;
@@ -93,14 +87,11 @@ h6 {
     }
 }
 
-
 .container {
     &.header {
         margin-top: -50px;
     }
 }
-
-
 
 .arrow {
     top: 70%;
@@ -127,7 +118,6 @@ h6 {
     }
 }
 
-
 .bounce {
     -webkit-animation-name: bounce;
     -moz-animation-name: bounce;
@@ -150,8 +140,6 @@ h6 {
     -o-animation-duration: 2s;
     animation-duration: 2s;
 }
-
-
 
 @-webkit-keyframes bounce {
     0%,
